@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginBottom="4dp"
+    android:layout_marginLeft="8dp"
+    card_view:cardCornerRadius="4dp">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/tvNama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="7dp"
+            android:layout_marginRight="7dp"
+            android:layout_toStartOf="@+id/tvJmlTagihan"
+            android:layout_toLeftOf="@+id/tvJmlTagihan"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="Robby Akbar" />
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="italic"
+            android:layout_below="@+id/tvNama"
+            tools:text="Ketua"
+            android:layout_marginRight="7dp"
+            android:layout_marginEnd="7dp"/>
+
+        <TextView
+            android:id="@+id/tvJmlTagihan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            tools:text="Rp. 25.000"/>
+
+        <TextView
+            android:id="@+id/tvStatusTagihan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvJmlTagihan"
+            android:textAllCaps="true"
+            tools:text="@string/already_paid"
+            android:layout_marginTop="8dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutBayar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvStatus"
+            android:visibility="gone"
+            android:layout_toLeftOf="@+id/buttonOpsi"
+            android:layout_toStartOf="@+id/buttonOpsi">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textInputEditTextBayar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/amount_paid"
+                android:inputType="number"
+                android:maxLines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/buttonOpsi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:visibility="gone"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_below="@+id/tvStatus"
+            android:text="@string/input"
+            android:layout_marginTop="7dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"/>
+
+        <TextView
+            android:id="@+id/tvPrint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"
+            android:layout_toLeftOf="@id/print"
+            android:layout_toStartOf="@id/print"
+            android:textColor="@color/colorBackground"
+            android:layout_below="@id/tvStatus"
+            android:text="@string/print_out" />
+
+        <View
+            android:id="@+id/print"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/tvStatus"
+            android:background="@drawable/ic_print" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

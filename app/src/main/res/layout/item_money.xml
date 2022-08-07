@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/activity_margin"
+    android:background="@color/grey100"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvPrint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="3dp"
+        android:layout_toLeftOf="@id/print"
+        android:layout_toStartOf="@id/print"
+        android:textColor="@color/colorBackground"
+        android:text="@string/print_out" />
+
+    <View
+        android:id="@+id/print"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/ic_print" />
+
+    <TextView
+        android:id="@+id/tvBill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/bill"
+        android:layout_toStartOf="@id/bill"
+        android:layout_below="@id/tvPrint"
+        android:textColor="@color/colorBackground"
+        android:text="@string/bill"/>
+    <TextView
+        android:id="@+id/bill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/tvPrint"
+        android:textColor="@android:color/holo_green_dark"
+        tools:text="Rp. 50,000" />
+    <TextView
+        android:id="@+id/tvIncome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/income"
+        android:layout_toStartOf="@id/income"
+        android:layout_below="@+id/tvBill"
+        android:textColor="@color/colorBackground"
+        android:text="@string/income"/>
+    <TextView
+        android:id="@+id/income"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/bill"
+        android:textColor="@android:color/holo_green_dark"
+        tools:text="Rp. 150,000" />
+    <TextView
+        android:id="@+id/tvSpending"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/spending"
+        android:layout_toStartOf="@id/spending"
+        android:layout_below="@+id/tvIncome"
+        android:textColor="@color/colorBackground"
+        android:text="@string/spending"/>
+    <TextView
+        android:id="@+id/spending"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/income"
+        android:textColor="@android:color/holo_red_dark"
+        tools:text="Rp. 20,000" />
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@+id/tvSpending"
+        android:background="@color/colorBackground"/>
+    <TextView
+        android:id="@+id/tvTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/total"
+        android:layout_toStartOf="@id/total"
+        android:layout_below="@+id/view"
+        android:textColor="@color/colorBackground"
+        android:text="@string/total"/>
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/view"
+        android:textStyle="bold"
+        android:textColor="@color/colorBackground"
+        tools:text="Rp. 180,000" />
+
+</RelativeLayout>

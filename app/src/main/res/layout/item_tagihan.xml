@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginBottom="4dp"
+    android:layout_marginLeft="8dp"
+    card_view:cardCornerRadius="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/tvNamaTagihan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:layout_toLeftOf="@+id/tvJmlTagihan"
+            android:layout_toStartOf="@+id/tvJmlTagihan"
+            android:layout_marginRight="8dp"
+            android:layout_marginEnd="8dp"
+            tools:text="Minggu 1 Bulan Februari 2019" />
+
+        <TextView
+            android:id="@+id/tvLimit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="italic"
+            android:layout_below="@+id/tvNamaTagihan"
+            android:text="@string/pay_limit"
+            android:layout_marginRight="7dp"
+            android:layout_marginEnd="7dp"/>
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_below="@id/tvNamaTagihan"
+            android:layout_toRightOf="@+id/tvLimit"
+            android:layout_toEndOf="@+id/tvLimit"
+            tools:text="2019-06-25" />
+
+        <TextView
+            android:id="@+id/tvJmlTagihan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            tools:text="Rp. 25.000"/>
+
+        <TextView
+            android:id="@+id/tvStatusTagihan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvJmlTagihan"
+            android:textAllCaps="true"
+            android:layout_marginTop="8dp"
+            tools:text="@string/unfinished"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

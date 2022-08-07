@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Onboarding shared preference key. -->
+    <string name="pref_has_user_seen_onboarding" translatable="false">hasUserSeenOnboarding</string>
+</resources>
